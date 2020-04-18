@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(249, 250, 250);
+  font-family: "Times New Roman", Times, serif;
+}
+#taga {
+box-sizing: border-box;
+border: 1px solid blue;
+padding: 10px;
+text-align: center;
+color: aliceblue;
+background-color: #6666ff;
+}
+th,td {
+    text-align: center;
+  }
+#img-icon {
+  height: 20px;
+}
+
+#total-orders {
+  background-color:rgb(169, 199, 120);
+}
+
+#order-delivered {
+  background-color:rgb(163, 238, 234);
+}
+
+#order-pending{
+  background-color:rgb(72, 241, 115);
+}
