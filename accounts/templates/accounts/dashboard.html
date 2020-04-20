@@ -21,6 +21,7 @@
               <td>{{ c.name }}</td>
               <td>{{ c.phone }}</td>
               <td>{{ c.email }}</td>
+              <td><a href="{% url 'customer_profile' c.id %}">view</a></td>
             </tr>
         {% endfor%}
       </table>
@@ -48,8 +49,8 @@
             <td>{{ o.product.all|join:"," }}</td>
             <td>{{ o.date_created }}</td>
             <td>{{ o.status }}</td>
-            <td><a href="#">update</a></td>
-            <td><a href="#">remove</a></td>
+            <td><a class="btn btn-sm btn-info" href="#">update</a></td>
+            <td><a class="btn btn-sm btn-danger" href="#">remove</a></td>
           </tr>
         {% endfor %}
       </table>

@@ -15,8 +15,9 @@
     <div class="card card-body">
       <h5>Customer info</h5>
       <hr>
-      <p>Email: </p>
-      <p>Phone: </p>
+      <p>Name: <span style="margin-left: 10px;">{{ customer.name }} </span></p>
+      <p>Email: <span style="margin-left: 15px;">{{ customer.email }} </span></p>
+      <p>Phone: <span style="margin-left: 9px;">{{ customer.phone }} </span></p>
     </div>
   </div>
 
@@ -24,7 +25,7 @@
     <div class="card card-body">
       <h5>Total orders</h5>
       <hr>
-      <h1 style="text-align: center;padding: 10px;"></h1>
+      <h1 style="text-align: center;padding: 10px;"> {{ total_orders }}</h1>
     </div>
   </div>
 </div>
@@ -46,14 +47,25 @@
     <div class=" card card-body">
       <table class="table table-sm">
         <tr>
+          <th>Order ID</th>
           <th>Product</th>
-          <th>Catalogy</th>
           <th>Price</th>
           <th>Date Ordered</th>
           <th>Status</th>
           <th>Update</th>
           <th>Remove</th>
         </tr>
+        {% for o in order %}
+        <tr>
+          <td>{{ o.id }}</td>
+          <td>{{ o.product.all|join:"," }}</td>
+          <td>{{ o.cost }}</td>
+          <td>{{ o.date_created }}</td>
+          <td>{{ o.status }}</td>
+          <td><a class="btn btn-sm btn-info" href="#">update</a></td>
+          <td><a class="btn btn-sm btn-danger"href="#">remove</a></td>
+        </tr>
+        {% endfor %}
       </table>
     </div>
   </div>

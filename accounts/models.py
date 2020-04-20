@@ -41,6 +41,7 @@ class Order(models.Model):
   customer = models.ForeignKey(Customer,null=True, on_delete=models.SET_NULL)
   #product = models.ForeignKey(Product,null=True, on_delete=models.SET_NULL)
   product = models.ManyToManyField(Product)
+  cost = models.FloatField(null=True)
   date_created = date_created = models.DateTimeField(auto_now_add=True)
   status = models.CharField(max_length=20, null=True, choices=STATUS)
   

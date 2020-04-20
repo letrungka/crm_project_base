@@ -1,6 +1,6 @@
 body {
   background-color: rgb(249, 250, 250);
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif";
 }
 #taga {
 box-sizing: border-box;
@@ -18,13 +18,13 @@ th,td {
 }
 
 #total-orders {
-  background-color:rgb(169, 199, 120);
+  background-color:rgb(191, 243, 184);
 }
 
 #order-delivered {
-  background-color:rgb(163, 238, 234);
+  background-color:rgb(215, 248, 240);
 }
 
 #order-pending{
-  background-color:rgb(72, 241, 115);
+  background-color:rgb(181, 218, 240);
 }
